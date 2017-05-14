@@ -1,0 +1,19 @@
+set title "explicit"
+set xlabel "axis X"
+set ylabel "axis Y"
+set zlabel "axis T"
+set print "-"
+k = 0
+set palette defined (   0 "#000000",\
+                        1 "#000090",\
+                        2 "#000fff",\
+                        3 "#0090ff",\
+                        4 "#0fffee",\
+                        5 "#90ff70",\
+                        6 "#ffee00",\
+                        7 "#ff7000",\
+                        8 "#ee0000",\
+                        9 "#7f0000")
+set pm3d map
+set pm3d flush begin ftriangles scansforward interpolate 1,1
+load 'run'
